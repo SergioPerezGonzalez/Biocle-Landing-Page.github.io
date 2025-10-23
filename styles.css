@@ -1,0 +1,403 @@
+/* Estilos personalizados para Biocle - Diseño minimalista y responsivo */
+
+/* Variables CSS para colores consistentes */
+:root {
+    --color-primary: #4CAF50; /* Verde principal para ecología */
+    --color-secondary: #81C784; /* Verde claro para acentos */
+    --color-light: #F1F8E9; /* Fondo claro */
+    --color-dark: #2E7D32; /* Verde oscuro para texto */
+    --color-white: #FFFFFF;
+    --color-gray: #6C757D;
+    --font-family: 'Roboto', sans-serif; /* Tipografía minimalista */
+}
+
+/* Estilos globales */
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--color-dark);
+    margin: 0;
+    padding: 0;
+}
+
+/* Navegación */
+.navbar {
+    background-color: var(--color-white) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    color: var(--color-primary) !important;
+    font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+    color: var(--color-dark) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-primary) !important;
+}
+
+/* Sección Hero */
+.hero-section {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://via.placeholder.com/1920x1080/4CAF50/FFFFFF?text=Naturaleza+Ecológica');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.hero-section .btn {
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Contenedor de secciones */
+#contenedor-secciones {
+    min-height: 100vh;
+}
+
+/* Secciones generales */
+section {
+    padding: 5rem 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--color-primary);
+}
+
+/* Clases para mostrar/ocultar secciones */
+.seccion-activa {
+    display: flex !important;
+}
+
+.seccion-oculta {
+    display: none !important;
+}
+
+/* Cards de productos */
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+/* Sección Quienes Somos */
+#quienes-somos p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+#quienes-somos img {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Sección Ayuda y Servicio */
+#ayuda-servicio .accordion-button {
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+#ayuda-servicio .accordion-button:not(.collapsed) {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+}
+
+#ayuda-servicio form .form-label {
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+#ayuda-servicio .btn {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#ayuda-servicio .btn:hover {
+    background-color: var(--color-dark);
+    border-color: var(--color-dark);
+}
+
+/* Sección Nuestra Historia */
+.step-icon img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+#nuestra-historia h5 {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+#nuestra-historia p {
+    font-size: 1rem;
+    color: var(--color-gray);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* Navbar superior mejorada para móviles */
+@media (max-width: 991px) {
+    .navbar {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+    }
+
+    .navbar-toggler {
+        border: none;
+        padding: 0.5rem;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        font-weight: 500;
+        color: var(--color-dark) !important;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-nav .nav-link.active {
+        color: var(--color-primary) !important;
+        background-color: rgba(76, 175, 80, 0.1);
+        border-radius: 8px;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: var(--color-primary) !important;
+        background-color: rgba(76, 175, 80, 0.05);
+        border-radius: 8px;
+    }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 991px) {
+    /* Deshabilitar scroll en móviles */
+    body {
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    /* Ajustes de sección para móviles */
+    section {
+        padding: 6rem 1rem 2rem 1rem; /* Espacio arriba para navbar superior */
+        min-height: calc(100vh - 56px); /* Ajustar altura considerando navbar superior */
+        overflow-y: auto; /* Permitir scroll interno si el contenido es largo */
+        max-height: calc(100vh - 56px);
+    }
+
+    /* Contenedor de secciones en móviles */
+    #contenedor-secciones {
+        height: calc(100vh - 56px);
+        overflow: hidden;
+        margin-top: 56px; /* Espacio para navbar */
+    }
+
+    .hero-section {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-section .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Cards más compactas en móviles */
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .card-img-top {
+        height: 180px;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    /* Layout de productos en columna en móviles */
+    #productos .row {
+        --bs-gutter-x: 0;
+    }
+
+    #productos .col-md-6 {
+        margin-bottom: 1rem;
+    }
+
+    /* Sección Quienes Somos */
+    #quienes-somos .row {
+        text-align: center;
+    }
+
+    #quienes-somos .col-md-6:first-child {
+        margin-bottom: 2rem;
+    }
+
+    #quienes-somos img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    /* FAQ más compacto */
+    #ayuda-servicio .accordion-button {
+        font-size: 0.9rem;
+        padding: 0.75rem 1rem;
+    }
+
+    #ayuda-servicio .accordion-body {
+        font-size: 0.9rem;
+    }
+
+    /* Formulario optimizado para móviles */
+    #contactForm .form-label {
+        font-size: 0.9rem;
+        margin-bottom: 0.25rem;
+    }
+
+    #contactForm .form-control {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    #contactForm .btn {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    /* Nuestra Historia */
+    #nuestra-historia .row {
+        --bs-gutter-x: 0.5rem;
+    }
+
+    #nuestra-historia .col-md-4 {
+        margin-bottom: 1.5rem;
+    }
+
+    #nuestra-historia h5 {
+        font-size: 1rem;
+    }
+
+    #nuestra-historia p {
+        font-size: 0.9rem;
+    }
+
+    /* Footer optimizado */
+    footer {
+        padding: 2rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Animaciones sutiles para minimalismo */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Aplicar fade-in a secciones al cargar */
+section {
+    animation: fadeIn 1s ease-in-out;
+}
